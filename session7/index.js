@@ -5,7 +5,6 @@
 // let fullname = firstname + " " + lastname
 // alert("Xin chao " + fullname)
 
-
 //bai 2
 
 // let a = Number(prompt("Nhập số tự nhiên thứ nhất")) //ép kiểu từ String sang Number
@@ -20,13 +19,20 @@
 // let c = Math.sqrt(a*a + b*b) //phép căn
 // console.log("Chieu dai canh huyen la: " + c)
 
-
 // bài 5
-let year = Number(prompt("Nhập vào năm"))
+// let year = Number(prompt("Nhập vào năm"))
 
 //câu điều kiện
-if(year % 4 == 0 && year % 100 != 0){
-    alert("Đây là năm nhuận")
-}else{
-    alert("Đây không phải là năm nhuận")
+// if(year % 4 == 0 && year % 100 != 0){
+//     alert("Đây là năm nhuận")
+// }else{
+//     alert("Đây không phải là năm nhuận")
+// }
+
+//bai 5
+let i = 1,
+    n = 3;
+while (i <= n + 1) {
+    console.log(i);
+    i += 1;
 }
