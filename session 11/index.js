@@ -1,10 +1,11 @@
 const btnAdd = document.getElementById("add-btn")
 const btnRemoveAll = document.getElementById("remove-btn")
 const list = document.getElementById("list-wrapper")
+const input = document.getElementById("input")
 
 
 function add() {
-
+    console.log(input.value)
     const li = document.createElement("li")
 
     //span 
