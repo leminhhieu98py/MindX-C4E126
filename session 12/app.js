@@ -36,32 +36,38 @@ const addForm = forms['add-book'];
 addForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // create elements
+  // // create elements
   const value = addForm.querySelector('input[type="text"]').value;
-  const li = document.createElement('li');
-  const bookName = document.createElement('span');
-  const deleteBtn = document.createElement('span');
-  const editBtn = document.createElement('span');
+  // const li = document.createElement('li');
+  // const bookName = document.createElement('span');
+  // const deleteBtn = document.createElement('span');
+  // const editBtn = document.createElement('span');
 
-  // add text content
-  bookName.textContent = value;
-  deleteBtn.textContent = 'delete';
-  editBtn.textContent = 'edit';
+  // // add text content
+  // bookName.textContent = value;
+  // deleteBtn.textContent = 'delete';
+  // editBtn.textContent = 'edit';
 
-  // add classes
-  bookName.classList.add('name');
-  deleteBtn.classList.add('delete');
-  editBtn.classList.add('edit');
+  // // add classes
+  // bookName.classList.add('name');
+  // deleteBtn.classList.add('delete');
+  // editBtn.classList.add('edit');
 
-  // append to DOM
-  li.appendChild(bookName);
-  li.appendChild(deleteBtn);
-  li.appendChild(editBtn);
-  list.appendChild(li);
+  // // append to DOM
+  // li.appendChild(bookName);
+  // li.appendChild(deleteBtn);
+  // li.appendChild(editBtn);
+  list.insertAdjacentHTML("beforeend", `
+      <li>
+        <span class="name">${value}</span>
+        <span class="delete">delete</span>
+        <span class="edit">edit</span>
+      </li>
+  `)
 });
 
 
-const booksArr = ["book1", "book2", "book 3", "book 1"]
+const booksArr = ["book1", "book2", "book 3", "book 4"]
 
 function addBook(string) {
   booksArr.push(string)
@@ -76,36 +82,35 @@ function deleteBook(index) {
 function displayBooks(arr) {
   for (let i = 0; i < arr.length; i++) {
     const value = arr[i]
-    const li = document.createElement('li');
-    const bookName = document.createElement('span');
-    const deleteBtn = document.createElement('span');
-    const editBtn = document.createElement('span');
+    // const li = document.createElement('li');
+    // const bookName = document.createElement('span');
+    // const deleteBtn = document.createElement('span');
+    // const editBtn = document.createElement('span');
 
-    // add text content
-    bookName.textContent = value;
-    deleteBtn.textContent = 'delete';
-    editBtn.textContent = 'edit';
+    // // add text content
+    // bookName.textContent = value;
+    // deleteBtn.textContent = 'delete';
+    // editBtn.textContent = 'edit';
 
-    // add classes
-    bookName.classList.add('name');
-    deleteBtn.classList.add('delete');
-    editBtn.classList.add('edit');
+    // // add classes
+    // bookName.classList.add('name');
+    // deleteBtn.classList.add('delete');
+    // editBtn.classList.add('edit');
 
-    // append to DOM
-    li.appendChild(bookName);
-    li.appendChild(deleteBtn);
-    li.appendChild(editBtn);
-    list.appendChild(li);
+    // // append to DOM
+    // li.appendChild(bookName);
+    // li.appendChild(deleteBtn);
+    // li.appendChild(editBtn);
+    list.insertAdjacentHTML("beforeend", `
+        <li>
+          <span class="name">${value}</span>
+          <span class="delete">delete</span>
+          <span class="edit">edit</span>
+        </li>
+    `)
   }
 }
 
 displayBooks(booksArr)
 
-
-btnDelete.addEventListener("submit", function () {
-  console.log(2)
-})
-
-btnDelete.onclick = function () {
-  console.log(2)
-}
+// deleteBtn.onClick = deleteBook(e)
